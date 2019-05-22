@@ -1,7 +1,6 @@
 package sword_to_offer;
 
 import structures.TreeNode;
-import exceptions.NotExistException;
 
 public class Q004_ReConstruct_BinaryTree {
     /*

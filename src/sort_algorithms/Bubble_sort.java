@@ -51,4 +51,46 @@ public class Bubble_sort {
         }
         return array;
     }
+
+    public int[] bubble(int[] arr){
+        boolean didSwap = false;
+        int len = arr.length;
+        if(len<=1)
+            return arr;
+        for (int i = 0; i < len; i++) {
+            for (int j = 0; j < len - i -1; j++) {
+                if(arr[j]>arr[j+1]){
+                    swap(arr, j, j+1);
+                    didSwap = true;
+                }
+            }
+            if(!didSwap)
+                return arr;
+        }
+        return arr;
+    }
+
+    public int[] bubble_rev(int[] arr){
+        boolean didSwap = false;
+        int len = arr.length;
+        if(len<=1)
+            return arr;
+        for (int i = 0; i < len ; i++) {
+            for (int j = len -1; j > i ; j--) {
+                if(arr[j]<arr[j-1]){
+                    swap(arr, j, j-1);
+                    didSwap = true;
+                }
+            }
+            if(!didSwap)
+                return arr;
+        }
+        return arr;
+    }
+
+    public void swap(int[] arr, int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 }

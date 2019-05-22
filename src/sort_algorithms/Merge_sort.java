@@ -13,37 +13,37 @@ public class Merge_sort {
    @ 稳定性：稳定
    @ Tips:
    */
-    public void merge_sort(int[] arr) {
-        if (arr.length == 0)
-            return;
-        merge_sort(arr, 0, arr.length - 1);
+    public void merge(int[] arr) {
+        int len = arr.length;
+        merge(arr, 0, len - 1);
     }
 
-    public void merge_sort(int[] arr, int low, int high) {
-        int mid = (low + high) / 2;
-        if (low < high) {
-            merge_sort(arr, low, mid);
-            merge_sort(arr, mid + 1, high);
-            merge(arr, low, mid, high);
+    public void merge(int[] arr, int left, int right) {
+        int mid = (left + right) / 2;
+        if (left < right) {
+            merge(arr, left, mid);
+            merge(arr, mid + 1, right);
+            merge(arr, left, mid, right);
         }
     }
 
-    public void merge(int[] arr, int low, int mid, int high) {
-        int len = high - low + 1;
+    public void merge(int[] arr, int left, int mid, int right) {
+        int len = right - left + 1;
         int[] temp = new int[len];
-        int i = low, j = mid + 1, index = 0;
-        while (i <= mid && j <= high) {
-            if (arr[i] < arr[j])
+        int i = left, j = mid + 1, index = 0;
+        while (i <= mid && j <= right) {
+            if(arr[i]<arr[j])
                 temp[index++] = arr[i++];
             else
                 temp[index++] = arr[j++];
         }
-        while (i <= mid)
+        while(i<=mid)
             temp[index++] = arr[i++];
-        while (j <= high)
+        while(j<=right)
             temp[index++] = arr[j++];
-        for (int m = 0; m < len; m++) {
-            arr[m + low] = temp[m];
+        for (int k = 0; k < len; k++) {
+            arr[left + k] = temp[k];
         }
     }
+
 }
