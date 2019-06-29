@@ -47,4 +47,23 @@ public class TreeNode {
         }
     }
 
+    public static TreeNode getTree(){
+        TreeNode root = new TreeNode(10);
+        TreeNode a1 = new TreeNode(6);
+        TreeNode a2 = new TreeNode(14);
+        TreeNode b1 = new TreeNode(4);
+        TreeNode b2 = new TreeNode(8);
+        TreeNode b3 = new TreeNode(12);
+        TreeNode b4 = new TreeNode(16);
+
+        root.left = a1;
+        root.right = a2;
+        a1.left = b1;
+        a1.right = b2;
+        a2.left = b3;
+        a2.right = b4;
+
+        return root;
+    }
+
 }
