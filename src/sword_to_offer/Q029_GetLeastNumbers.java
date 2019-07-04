@@ -21,11 +21,13 @@ public class Q029_GetLeastNumbers {
     public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
 
         ArrayList<Integer> list = new ArrayList<Integer>();
+        if(input.length < k || input.length == 0 || k<=0)
+            return list;
 
         PriorityQueue<Integer> leastNumbers = new PriorityQueue<>(k, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return o2.compareTo(o1);
+                return o1.compareTo(o2);
             }
         });
 
@@ -33,8 +35,9 @@ public class Q029_GetLeastNumbers {
             leastNumbers.offer(input[i]);
         }
 
-        for (Integer integer : leastNumbers)
-            list.add(integer);
+        for (int i = 0; i < k; i++) {
+            list.add(leastNumbers.poll());
+        }
 
         return list;
     }

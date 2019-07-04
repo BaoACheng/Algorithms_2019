@@ -1,7 +1,5 @@
 package sword_to_offer;
 
-import javafx.beans.binding.When;
-import jdk.nashorn.internal.ir.WhileNode;
 import structures.RandomListNode;
 
 public class Q025_DuplicateList {
