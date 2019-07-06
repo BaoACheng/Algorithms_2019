@@ -1,6 +1,8 @@
 package sword_to_offer;
 
 
+import java.util.ArrayList;
+
 public class Q046_LastRemaining {
     /*
      * 问题描述:
@@ -18,33 +20,24 @@ public class Q046_LastRemaining {
      *
      */
     public int LastRemaining_Solution(int n, int m) {
-        int[] array = new int[n];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = 1;
+        if(n == 0)
+            return -1;
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            list.add(i);
         }
-        int count = 0, i = 0, step = 0;
-        while (count < n) {
-            //数组越界，则直接置为起点
-            if (i == n)
-                i = 0;
-            if (array[i] == -1) {
-                i++;
-                continue;
-            }
-            step++;
-            i++;
-            //每当找到一个目标位置，则将该位置置为-1
-            if (step == m) {
-                array[i] = -1;
-                count++;
-                step = 0;
-            }
+        System.out.println(list);
+        int index = 0;
+        while (list.size() > 1) {
+            index = (index + m - 1) % list.size();
+            list.remove(index);
+            System.out.println(list);
         }
-        return i+1;
+        return list.get(0);
     }
 
     public static void main(String[] args) {
         Q046_LastRemaining last = new Q046_LastRemaining();
-        System.out.println(last.LastRemaining_Solution(5,2));
+        System.out.println(last.LastRemaining_Solution(5, 2));
     }
 }
