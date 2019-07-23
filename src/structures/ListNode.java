@@ -14,7 +14,7 @@ public class ListNode {
         this.next = next;
     }
 
-    public void print(ListNode head){
+    public static void print(ListNode head){
         while(head!=null){
             System.out.print(head.val + " ");
             head = head.next;
@@ -23,11 +23,15 @@ public class ListNode {
 
     public static ListNode getList(){
         ListNode head = new ListNode(1);
-        ListNode sec = new ListNode(3);
-        ListNode third = new ListNode(5);
+        ListNode sec = new ListNode(1);
+        ListNode third = new ListNode(2);
+        ListNode fourth = new ListNode(2);
+        ListNode fifth = new ListNode(2);
 
         head.next = sec;
         sec.next = third;
+        third.next = fourth;
+        fourth.next = fifth;
 
         return head;
     }

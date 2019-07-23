@@ -47,6 +47,7 @@ public class Q018_MirrorTree {
 
         TreeNode.preOrder(root);
         mirrorTree(root);
+        System.out.println();
         TreeNode.preOrder(root);
     }
 }

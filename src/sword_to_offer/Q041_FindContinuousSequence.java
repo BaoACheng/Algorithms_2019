@@ -52,7 +52,7 @@ public class Q041_FindContinuousSequence {
 
     public static void main(String[] args) {
         Q041_FindContinuousSequence find = new Q041_FindContinuousSequence();
-        ArrayList<ArrayList<Integer>> res = find.FindContinuousSequence(3);
+        ArrayList<ArrayList<Integer>> res = find.FindContinuousSequence(1000);
         for (int i = 0; i < res.size(); i++) {
             System.out.println(res.get(i));
         }
