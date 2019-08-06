@@ -10,29 +10,35 @@ public class Q000_AllTestFile {
         a = 5;
     }
 
-    public void testString(){
+    public void testString() {
         String a = "Hello";
         String b = "Hello";
-        if(a == b)
+        if (a == b)
             System.out.println("a = b");
         String c = new String("Hello");
-        if(a == c)
+        if (a == c)
             System.out.println("a = c");
         else
             System.out.println("a != c");
     }
 
-    public void testChangString(StringBuffer str, int indexA, int indexB){
+    public void testChangString(StringBuffer str, int indexA, int indexB) {
         System.out.println("str = " + str);
         char temp = str.charAt(indexA);
         str.setCharAt(indexA, str.charAt(indexB));
         str.setCharAt(indexB, temp);
-        System.out.println("str = "+ str);
+        System.out.println("str = " + str);
+    }
+
+    public static void getMaxNumber(double a, double b) {
+        double res = a % b;
+        System.out.println(res);
     }
 
     public static void main(String[] args) {
         Q000_AllTestFile test = new Q000_AllTestFile();
         StringBuffer buff = new StringBuffer("abc");
-        test.testChangString(buff, 1,2);
+        test.testChangString(buff, 1, 2);
+        getMaxNumber(100,33);
     }
 }
