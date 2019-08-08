@@ -2,7 +2,7 @@ package PinDupDuo;
 
 import java.util.*;
 
-public class checkLoop {
+public class Q002_checkLoop {
 
     /*
      * 依次对比两个字符串是否有相同字母，若有，则选取，并从字符中删除，然后继续判断下一组，直至所有的都可以匹配，则返回true，否则false

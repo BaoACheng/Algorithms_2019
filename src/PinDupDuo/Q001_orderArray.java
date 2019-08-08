@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class orderArray {
+public class Q001_orderArray {
     /*
      * A 是几乎完全升序序列
      * B 是随机序列
