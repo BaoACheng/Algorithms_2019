@@ -1,5 +1,8 @@
 package yuan;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Q002_getMazeRes {
@@ -8,7 +11,7 @@ public class Q002_getMazeRes {
     public static int k = 1;
     public static int sum = 1;
 
-    public static void dfs(int q, int p, int a[][], int m, int n, int w) {
+    public static void dfs(int p, int q, int a[][], int m, int n, int w) {
         for (int i = 0; i < 4; i++) {
             int x = b[i][0];
             int y = b[i][1];
@@ -34,7 +37,8 @@ public class Q002_getMazeRes {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        System.setIn(new BufferedInputStream(new FileInputStream("resource/input2.txt")));
         Scanner scanner = new Scanner(System.in);
         int m = scanner.nextInt();
         int n = scanner.nextInt();
