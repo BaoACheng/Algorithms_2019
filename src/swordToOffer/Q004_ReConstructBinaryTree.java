@@ -2,7 +2,7 @@ package swordToOffer;
 
 import structures.TreeNode;
 
-public class Q004_ReConstruct_BinaryTree {
+public class Q004_ReConstructBinaryTree {
     /*
      * 题目描述：
      *   输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -48,7 +48,7 @@ public class Q004_ReConstruct_BinaryTree {
     public static void main(String[] args) {
         int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
         int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
-        Q004_ReConstruct_BinaryTree re = new Q004_ReConstruct_BinaryTree();
+        Q004_ReConstructBinaryTree re = new Q004_ReConstructBinaryTree();
         TreeNode root = re.reConstructBinaryTree(pre, in);
         System.out.print("后序:");
         TreeNode.lastOrder(root);

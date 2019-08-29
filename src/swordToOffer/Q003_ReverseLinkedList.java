@@ -5,7 +5,7 @@ import structures.ListNode;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class Q003_Reverse_linkList {
+public class Q003_ReverseLinkedList {
     /*
      * 题目描述：
      *   输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。

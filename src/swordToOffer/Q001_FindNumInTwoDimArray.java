@@ -1,6 +1,6 @@
 package swordToOffer;
 
-public class Q001_Find_num_in_two_dim_array {
+public class Q001_FindNumInTwoDimArray {
     /*
      * 题目描述：
      *  在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
@@ -49,7 +49,7 @@ public class Q001_Find_num_in_two_dim_array {
     }
 
     public static void main(String[] args) {
-        Q001_Find_num_in_two_dim_array fn = new Q001_Find_num_in_two_dim_array();
+        Q001_FindNumInTwoDimArray fn = new Q001_FindNumInTwoDimArray();
         int[][] arr = {{1, 2, 8, 9}, {2, 4, 9, 12}, {4, 7, 10, 13}, {6, 8, 11, 15}};
         int num = 7;
         if (fn.Find_new(arr, num))
